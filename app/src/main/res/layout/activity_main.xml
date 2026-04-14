@@ -1,55 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="32dp">
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trang Chủ"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:textColor="#333333"
-        android:layout_marginBottom="48dp" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Đi tới Đăng Nhập"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="#2196F3"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="30dp"
-        android:layout_marginBottom="16dp" />
+        <EditText
+            android:id="@+id/etIdea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Write your ideas!!!"
+            android:padding="12dp"
+            android:background="@android:drawable/edit_text" />
 
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Đi tới Đăng Ký"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="#4CAF50"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="30dp"
-        android:layout_marginBottom="16dp" />
+        <Button
+            android:id="@+id/btnPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnProfile"
+    <ListView
+        android:id="@+id/lvPosts"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="Xem Profile"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:backgroundTint="#FF9800"
-        android:textColor="#FFFFFF"
-        app:cornerRadius="30dp" />
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:dividerHeight="0dp" />
 
 </LinearLayout>
